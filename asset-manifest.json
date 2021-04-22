@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TeckerHW20/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/TeckerHW20/static/js/main.6c2300f6.chunk.js",
+    "main.js.map": "/TeckerHW20/static/js/main.6c2300f6.chunk.js.map",
+    "runtime-main.js": "/TeckerHW20/static/js/runtime-main.277ac067.js",
+    "runtime-main.js.map": "/TeckerHW20/static/js/runtime-main.277ac067.js.map",
+    "static/js/2.c864f983.chunk.js": "/TeckerHW20/static/js/2.c864f983.chunk.js",
+    "static/js/2.c864f983.chunk.js.map": "/TeckerHW20/static/js/2.c864f983.chunk.js.map",
+    "static/js/3.c5d55fac.chunk.js": "/TeckerHW20/static/js/3.c5d55fac.chunk.js",
+    "static/js/3.c5d55fac.chunk.js.map": "/TeckerHW20/static/js/3.c5d55fac.chunk.js.map",
+    "index.html": "/TeckerHW20/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/TeckerHW20/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.c864f983.chunk.js.LICENSE.txt": "/TeckerHW20/static/js/2.c864f983.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.277ac067.js",
+    "static/js/2.c864f983.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.6c2300f6.chunk.js"
+  ]
+}
