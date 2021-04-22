@@ -1,6 +1,5 @@
 import React from "react";
-import { Buddy } from "./Buddy";
-import { Ticker } from "./Ticker";
+
 import { Timer } from "./Timer";
 import { Timer2 } from "./Timer2";
 
@@ -31,8 +30,8 @@ export const Clock = class Clock extends React.Component {
                 {/*<Ticker name = 'New Clock'/> */}
               
 
-
-                <Timer step ={1} />
+                <Timer2 min={1} sec={7} step={2}/>
+                {/*<Timer step ={1} min={0} sec={10} />*/}
             </div>
             
         )

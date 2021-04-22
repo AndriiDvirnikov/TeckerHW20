@@ -1,36 +1,28 @@
 import React from "react"
 
 export const Timer = class Timer extends React.Component {
-       state = {
-            minutes: 0,
-            seconds: 5,
-            
+       state = {         
             start:false,
         }
-    start = () =>{
-        if(this.state.start){
-            this.setState ({start:false})
-        }else (this.setState ({start:true}))
-    }
-
   
 
     startOnClick = () => {
+        
         if (this.state.start){
             clearInterval (this.ticker);
             this.setState ({start: false})
         } else {
             const step = this.props.step*1000;
             this.ticker = setInterval ( ()=>{ 
-                const {seconds,minutes} = this.state
-                if (seconds>0){
-                    this.setState (({seconds})=>({seconds:seconds-1}))
+                const {min,sec} = this.props;
+                if (sec>0){
+                   sec = sec-1
                 }  
-                if (seconds===0){
-                    if (minutes === 0){
+                if (sec===0){
+                    if (min === 0){
                         clearInterval (this.ticker)
                     }else {
-                        this.setState (({minutes})=>({minutes:minutes-1, seconds:59}))
+                        this.setState (({min})=>({min:min-1, sec:59}))
                     }
                 }
         },step)
@@ -38,20 +30,18 @@ export const Timer = class Timer extends React.Component {
 }
     stopOnlick = () => {
         clearInterval (this.ticker) 
-        console.log ('time left', this.state.minutes, ':', this.state.seconds <10? `0${this.state.seconds}`: this.state.seconds)
+        console.log ('time left', this.props.min, ':', this.props.sec <10? `0${this.props.sec}`: this.props.sec)
     }
 
-    componentDidMount (){
-    
-    }
 
 
 
     render (){
-        const {minutes,seconds}= this.state
+        const {min,sec}= this.props
+        console.log (this.props)
         return (
             <div>
-                <time>Time remaining {minutes} : {seconds<10? `0${seconds}`: seconds}</time>
+                <time>Time remaining {min} : {sec<10? `0${sec}`: sec}</time>
                 <button onClick={this.startOnClick}>Start</button>
                 <button onClick={this.stopOnlick}>Stop</button>
             </div>
